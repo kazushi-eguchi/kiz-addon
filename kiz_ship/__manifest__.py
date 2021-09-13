@@ -10,7 +10,7 @@
     "license": "LGPL-3",
     "application": True,
     "installable": True,
-    "depends": ["base"],
+    "depends": ["base","crm"],
     "data": [
         "views/ships.xml",
         "security/ir.model.access.csv"
