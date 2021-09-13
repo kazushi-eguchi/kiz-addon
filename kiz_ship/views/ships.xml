@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ship_action" model="ir.actions.act_window">
+      <field name="name">ships</field>
+      <field name="res_model">ships.ship</field>
+      <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <menuitem
+      id="ships_root"
+      name="ships"
+      sequence="10"/>
+
+    <menuitem
+      id="ships_ship_root"
+      name="Ships"
+      parent="ships_root"
+      sequence="10"/>
+
+    <menuitem
+      id="ships_ship"
+      name="ships"
+      parent="ships_ship_root"
+      action="ship_action"
+      sequence="10"/>
+
+
+</odoo>
