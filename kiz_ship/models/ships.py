@@ -9,7 +9,7 @@ class ShipsShip(models.Model):
     name = fields.Char("ship", required=True)
     sno = fields.Char("sno", required=True)
     note = fields.Text(string="Description")
-    lead_id = fields.Many2one(
-         "crm.lead",
-         readonly=True
-    )
+    ship_image = fields.Binary(string="Ship Image")
+    # lead_id = fields.One2many(
+    #     comodel_name="crm.lead",
+    # )
