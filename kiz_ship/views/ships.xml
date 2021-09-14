@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="ship_form" model="ir.ui.view">
+            <field name="name">ships.ship.form</field>
+            <field name="model">ships.ship</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Name"/>
+                                <field name="sno" string="sno"/>
+                            </group>
+                            <group>
+                                <field name="note" string="note"/>
+
+                            </group>
+                        </group>
+                        <group>
+                            <field name="lead_id" string="Lead"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record id="ship_tree" model="ir.ui.view">
+            <field name="name">ships.ship.tree</field>
+            <field name="model">ships.ship</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Name"/>
+                    <field name="sno" string="sno"/>
+                    <field name="note" string="note"/>
+                    <field name="lead_id" string="Lead"/>
+                </tree>
+            </field>
+    </record>
+
     <record id="ship_action" model="ir.actions.act_window">
       <field name="name">ships</field>
       <field name="res_model">ships.ship</field>

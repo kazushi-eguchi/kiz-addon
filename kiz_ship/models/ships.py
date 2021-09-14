@@ -10,8 +10,6 @@ class ShipsShip(models.Model):
     sno = fields.Char("sno", required=True)
     note = fields.Text(string="Description")
     lead_id = fields.Many2one(
-        "crm.lead",
-        string="Lead",
-        index=True,
-        tracking=True,
+         "crm.lead",
+         readonly=True
     )
