@@ -16,9 +16,13 @@
                                 <field name="ship_image" widget="image" class="oe_avatar"/>
                             </group>
                         </group>
-<!--                        <group>-->
-<!--                            <field name="lead_id" string="Lead"/>-->
-<!--                        </group>-->
+                        <group>
+                            <field
+                                name="ship_ids"
+                                readonly="True"
+                                attrs="{'invisible': ('ship_ids', '=', False)}"
+                            />
+                        </group>
                     </sheet>
                 </form>
             </field>
@@ -32,7 +36,6 @@
                     <field name="name" string="Name"/>
                     <field name="sno" string="sno"/>
                     <field name="note" string="note"/>
-<!--                    <field name="lead_id" string="Lead"/>-->
                 </tree>
             </field>
     </record>
