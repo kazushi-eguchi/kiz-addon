@@ -9,3 +9,7 @@ class CrmLead(models.Model):
         "ships.ship",
         string="ship"
     )
+    weight = fields.Integer(
+        name="weight",
+        help="Enter in Kg"
+    )

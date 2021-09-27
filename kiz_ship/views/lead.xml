@@ -5,10 +5,15 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
-            <field name="name" position="after">
+            <field name="probability" position="after">
+                <label for="weight" string="weight"/>
+                <field name="weight" />
+            </field>
+            <field name="probability" position="after">
                 <label for="ship_id" string="shipid"/>
                 <field name="ship_id" />
             </field>
+
         </field>
     </record>
 </odoo>
