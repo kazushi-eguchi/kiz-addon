@@ -1,5 +1,47 @@
 <odoo>
   <data>
+    <record id="kiz_construction_form" model="ir.ui.view">
+            <field name="name">kiz_construction.kiz_construction.form</field>
+            <field name="model">kiz_construction.kiz_construction</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="status" widget="statusbar" options="{'clickable':'1}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="no" string="sno"/>
+                                <field name="deadline" string="deadline"/>
+
+                                <field name="s_no" string="S No."/>
+                                <field name="name" string="name"/>
+                                <field name="first_category" string="First category"/>
+                                <field name="second_category" string="Second category"/>
+                            </group>
+                            <group>
+
+                                <field name="account_executive" string="account executive"/>
+                                <field name="trading_company" string="trading company"/>
+                                <field name="trading_company_short_name" string="trading company short name"/>
+                                <field name="branch" string="branch"/>
+                                <field name="shipyard_full" string="Shipyard Full"/>
+                                <field name="shipyard_short" string="Shipyard short"/>
+                                <field name="building" string="building"/>
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page string="ship info">
+                                <group>
+                                    <field name="ship_class" string="Ship class"/>
+                                </group>
+                            </page>
+                            </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
     <!-- explicit list view definition -->
 
     <record model="ir.ui.view" id="kiz_construction.list">

@@ -8,9 +8,14 @@ class kiz_construction(models.Model):
      _description = 'kiz_construction.kiz_construction'
 
      no = fields.Char(string="construction no", require=True, Transrate=True)
+     status = fields.Selection([
+          ('lead','lead'),
+          ('promising','Promising'),
+          ('contract','contract'),
+     ],required= True, default='lead')
      deadline = fields.Date(string="deadline")
      account_executive =fields.Char(string="account executive")
-     trading_company = fields.Many2one('res.company', string='Company', required=True, readonly=True, default=lambda self: self.env.company)
+     trading_company = fields.Many2one('res.company', string='Company', required=True)
      trading_company_short_name =fields.Char(string="trading company short name")
      branch = fields.Char(string="Branch")
      shipyard_full = fields.Char(string="Shipyard Full")
