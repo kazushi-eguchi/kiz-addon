@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
-# class kiz_purchase_custom(models.Model):
-#     _name = 'kiz_purchase_custom.kiz_purchase_custom'
-#     _description = 'kiz_purchase_custom.kiz_purchase_custom'
+class KizPurchaseAdd(models.Model):
+    _inherit = 'purchase.order.line'
+    # _name = 'kiz_purchase_add.kiz_purchase_add'
+    # _description = 'kiz_purchase_addon'
 
-#     name = fields.Char()
+    purchase_line_image = fields.Binary(string="image")
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
